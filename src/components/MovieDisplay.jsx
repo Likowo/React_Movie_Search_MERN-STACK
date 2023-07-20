@@ -12,31 +12,22 @@ function MovieDisplay({movie}) {
         <h2>{movie.Genre}</h2>
         <img src={movie.Poster} alt={movie.Title} />
         <h2>{movie.Year}</h2>
+        <h2>{movie.Rated}</h2>
+        <h2>{movie.Awards}</h2>
       </>
     );
   };
 
-  //Ternary operator will determine which functions JSX we will return
-// return movie ? loaded() : loading();
 //function to return loading JSX
 const loading = () => {
   return <h1>No Movie to Display</h1>;
 };
+ 
+//Ternary operator will determine which functions JSX we will return
+ return movie ? loaded() : loading();
 
-  //The component must return some JSX
+//The component must return some JSX
   return movie ? loaded() : loading();
-  
-  // return (
-  //   <>
-  //     <h1>{movie.Title}</h1>
-  //     <h2>{movie.Genre}</h2>
-  //     <img src={movie.Poster} alt={movie.Title} />
-  //     <h2>{movie.Year}</h2>
-  //     <h2>{movie.rated}</h2>
-  //     <h2>{movie.ratings}</h2>
-  //     <h2>{movie.awards}</h2>
-  //   </>
-  // );
 };
 //NB: // We must export the component like below, to use it in other files 
 export default MovieDisplay
