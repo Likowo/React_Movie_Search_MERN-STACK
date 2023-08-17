@@ -7,7 +7,7 @@ function App() {
    // --------------------------{APIKEY DATA} --i.e. //variable with your apiKey
   const apiKey= "2dfc8cb5";
 
-  // --------------------------{  //State to hold movie data}
+  // --------------------------{  // Declare State to hold movie data}
 const [movie,setMovie] = useState(null);
 
 //Function to getMovies
